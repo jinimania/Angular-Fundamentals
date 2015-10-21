@@ -6,3 +6,13 @@ myControllers = angular.module 'myControllers', []
 myControllers.controller 'GreetingController', ['$scope',
   ($scope) -> $scope.greeting = 'Hello World!'
 ]
+
+# Define the HeaderController Controller
+myControllers.controller 'HeaderController', ['$scope',
+  ($scope) -> $scope.pageHeading = 'Angular.js Starter Project'
+]
+
+# Define the FooterController Controller
+myControllers.controller 'FooterController', ['$scope',
+  ($scope) -> $scope.currentDateTime = new Date()
+]
