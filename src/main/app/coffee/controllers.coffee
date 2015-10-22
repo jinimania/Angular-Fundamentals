@@ -3,25 +3,11 @@
 myControllers = angular.module 'myControllers', []
 
 # Define the GreetingController Controller
-myControllers.controller 'GreetingController', ['$scope',
-  ($scope) -> [
-    $scope.greetings = [
-      {
-        id: 1
-        text: 'Hello World!'
-        lang: 'en'
-      },
-      {
-        id: 2
-        text: 'Hola Mundo!'
-        lang: 'es'
-      },
-      {
-        id: 3
-        text: 'Bonjour Le Mond'
-        lang: 'fr'
-      }
-    ]
+myControllers.controller 'GreetingController', ['$scope', '$http',
+  ($scope, $http) -> [
+
+    $http.get('assets/app/data/greetings/greetings.json').success (data) -> $scope.greetings = data
+
     $scope.greetingSort = 'text'
   ]
 
