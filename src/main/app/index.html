@@ -16,13 +16,14 @@
 
 <header id="header" ng-include="'assets/app/partials/header.html'" ng-controller="HeaderController"></header>
 
-<section id="main" ng-include="'assets/app/partials/greeting-list.html'" ng-controller="GreetingController"></section>
+<section id="main" ng-view></section>
 
 <footer id="footer" ng-include="'assets/app/partials/footer.html'" ng-controller="FooterController"></footer>
 
 <script src="assets/lib/jquery-2.1.4.min.js"></script>
 <script src="assets/lib/angular-1.4.7.min.js"></script>
 <script src="assets/lib/angular-resource-1.4.7.min.js"></script>
+<script src="assets/lib/angular-route-1.4.7.min.js"></script>
 <script src="assets/lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="assets/app/js/app-0.3.1.min.js"></script>
 
